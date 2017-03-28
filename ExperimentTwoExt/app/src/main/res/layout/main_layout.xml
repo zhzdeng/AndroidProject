@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/rootView">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big_size"
+        android:text="@string/title"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/sysu"
+        android:layout_margin="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TableRow style="@style/TableRow" >
+            <android.support.design.widget.TextInputLayout
+                android:layout_column="1"
+                android:id="@+id/more_username"
+                style="@style/TextInputLayout">
+                    <EditText
+                        android:gravity="center"
+                        style="@style/Editview"
+                        android:hint="@string/writeusername" />
+            </android.support.design.widget.TextInputLayout>
+        </TableRow>
+
+         <TableRow
+            style="@style/TableRow">
+             <android.support.design.widget.TextInputLayout
+                 android:layout_column="1"
+                 android:id="@+id/more_password"
+                 style="@style/TextInputLayout">
+                 <EditText
+                     android:gravity="center"
+                     style="@style/Editview"
+                     android:hint="@string/writepassword"
+                     android:inputType="textPassword"/>
+             </android.support.design.widget.TextInputLayout>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normal_size"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/student">
+            <RadioButton
+                android:id="@+id/student"
+                style="@style/RadioButton"
+                android:text="@string/student"/>
+            <RadioButton
+                android:id="@+id/teacher"
+                style="@style/RadioButton"
+                android:text="@string/teacher"
+                android:checked="false" />
+            <RadioButton
+                android:id="@+id/party"
+                style="@style/RadioButton"
+                android:text="@string/party"
+                android:checked="false" />
+            <RadioButton
+                android:id="@+id/manager"
+                style="@style/RadioButton"
+                android:text="@string/manager"
+                android:checked="false" />
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:gravity="center_horizontal">
+            <Button android:layout_marginRight="5dp"
+                android:id="@+id/login"
+                android:textSize="@dimen/normal_size"
+                android:background="@drawable/login"
+                android:text="@string/login"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/write" />
+            <Button android:textSize="@dimen/normal_size"
+                    android:background="@drawable/login"
+                android:id="@+id/signup"
+                android:text="@string/signup"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:color="@color/colorPrimary"
+                android:textColor="@color/write" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big_size"
+        android:text="@string/title"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/sysu"
+        android:layout_margin="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        <TableRow style="@style/TableRow">
+            <TextView
+                android:layout_column="1"
+                style="@style/Textview"
+                android:text="@string/username" />
+
+            <EditText
+                style="@style/Editview"
+                android:hint="@string/writeusername"
+                android:layout_column="2" />
+        </TableRow>
+
+         <TableRow
+            style="@style/TableRow">
+            <TextView
+                android:layout_column="1"
+                style="@style/Textview"
+                android:text="@string/password" />
+            <EditText
+                style="@style/Editview"
+                android:hint="@string/writepassword"
+                android:inputType="textPassword"
+                android:layout_column="2" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal">
+            <RadioGroup
+                android:id="@+id/id0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normal_size"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/id1">
+            <RadioButton
+                android:id="@+id/id1"
+                style="@style/RadioButton"
+                android:text="@string/student"/>
+            <RadioButton
+                android:id="@+id/id2"
+                style="@style/RadioButton"
+                android:text="@string/teacher"
+                android:checked="false" />
+            <RadioButton
+                android:id="@+id/id3"
+                style="@style/RadioButton"
+                android:text="@string/party"
+                android:checked="false" />
+            <RadioButton
+                android:id="@+id/id4"
+                style="@style/RadioButton"
+                android:text="@string/manager"
+                android:checked="false" />
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow android:gravity="center_horizontal">
+            <Button android:layout_marginRight="5dp"
+                android:textSize="@dimen/normal_size"
+                android:background="@drawable/login"
+                android:text="@string/login"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/write" />
+            <Button android:textSize="@dimen/normal_size"
+                    android:background="@drawable/login"
+                android:text="@string/signup"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:color="@color/colorPrimary"
+                android:textColor="@color/write" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

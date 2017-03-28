@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TextView圆形 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/mainListFirstName"
+        android:background="@drawable/shape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="D"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/normal_size"
+        android:textColor="@color/white"
+        />
+    />
+    <TextView
+        android:id="@+id/mainListName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_size"
+        android:text="Dewin"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        />
+</LinearLayout>
